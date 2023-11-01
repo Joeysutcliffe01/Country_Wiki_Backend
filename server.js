@@ -3,7 +3,8 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3500;
 
-app.use(cors());
+app.use(cors({ origin: "https://country-wiki-n98f.onrender.com" }));
+
 app.use(express.json());
 
 app.post("/country", async (req, res) => {
